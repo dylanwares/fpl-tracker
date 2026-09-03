@@ -4,7 +4,14 @@
       "Bash(npx --yes create-next-app@latest . --ts --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm --disable-git --yes)",
       "Bash(curl -s -o /tmp/a.json -w '%{http_code}' __TRACKED_VAR__/api/team/analysis)",
       "Read(//tmp/**)",
-      "Bash(curl -s __TRACKED_VAR__/api/team/fixtures?horizon=5)"
+      "Bash(curl -s __TRACKED_VAR__/api/team/fixtures?horizon=5)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Read(//c/Program Files/GitHub CLI/**)",
+      "Bash(where gh *)",
+      "PowerShell(Get-Command gh -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; git config --global credential.helper; git config --global --get-regexp \"credential\"; echo \"---\"; Test-Path \"$env:LOCALAPPDATA\\\\GitHubDesktop\")",
+      "Bash(ssh -o BatchMode=yes -o ConnectTimeout=8 -T git@github.com)"
     ]
   }
 }
