@@ -38,13 +38,20 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${geistSans.variable} h-full`}>
-      <body className="min-h-full pb-14">
-        <DowntimeBanner status={shell.gameStatus} asOfGw={shell.asOfGw} />
-        <StickyHeader
-          targetGw={shell.targetGw}
-          deadlineEpoch={shell.deadlineEpoch}
-          asOfGw={shell.asOfGw}
-        />
+      <body className="min-h-full">
+        {/* One sticky container so the banner + header both clear the iOS
+         * status bar / notch when installed to the home screen. */}
+        <div
+          className="sticky top-0 z-30 bg-bg"
+          style={{ paddingTop: 'env(safe-area-inset-top)' }}
+        >
+          <DowntimeBanner status={shell.gameStatus} asOfGw={shell.asOfGw} />
+          <StickyHeader
+            targetGw={shell.targetGw}
+            deadlineEpoch={shell.deadlineEpoch}
+            asOfGw={shell.asOfGw}
+          />
+        </div>
         <main className="mx-auto max-w-2xl">
           {shell.configError ? (
             <div className="m-4 rounded-lg border border-threat/40 bg-threat/10 p-4 text-sm">

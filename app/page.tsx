@@ -15,7 +15,7 @@ export default async function PlanningDashboard() {
   const { primaryLeagueId, entryId } = getConfig();
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       {/* cheap: standings render immediately */}
       <LeaguePosition leagueId={primaryLeagueId} myEntryId={entryId} />
 

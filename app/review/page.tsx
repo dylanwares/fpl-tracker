@@ -24,7 +24,7 @@ export default async function ReviewPage() {
   const prevGw = history.at(-2);
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       <Section title="Last gameweek">
         {lastGw ? (
           <TileRow>

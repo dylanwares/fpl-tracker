@@ -16,7 +16,7 @@ export default async function LeaguePage({
   if (!/^\d+$/.test(id)) notFound();
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       <Suspense
         fallback={
           <Section title="League">

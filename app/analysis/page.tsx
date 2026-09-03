@@ -21,7 +21,7 @@ export default async function AnalysisPage() {
   const finalPva = a.pointsVsAverage.at(-1)?.cumulativeDelta ?? 0;
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       <Section title="Points vs average" aside={`through GW${a.asOfGw}`}>
         <div className="px-4 py-3">
           <MiniBars values={pvaValues} labels={pvaLabels} />

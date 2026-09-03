@@ -41,6 +41,9 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  /* Clear the fixed bottom nav (h-14) plus the iOS home-bar inset when the app
+   * runs full-screen from the home screen. */
+  padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
 }
 
 /* Tabular figures everywhere a number sits in a column, so figures align down

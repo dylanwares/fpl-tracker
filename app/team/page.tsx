@@ -22,7 +22,7 @@ export default async function TeamPage() {
   const tickerByPlayer = new Map(ticker.rows.map((r) => [r.player.id, r]));
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       <Section
         title={squad.entry.entryName}
         aside={

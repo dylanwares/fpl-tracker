@@ -10,7 +10,7 @@ export default async function ScoutPage() {
   const s = await getScoutData();
 
   return (
-    <div className="pb-4">
+    <div className="pb-12">
       <p className="px-4 pt-4 text-xs text-muted">
         Overall-game context, separate from the league tables. &ldquo;Template&rdquo;
         is the most-selected valid squad by global ownership — a rough proxy for
