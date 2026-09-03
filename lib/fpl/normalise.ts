@@ -115,6 +115,8 @@ function normalisePlayer(
         : num(el.chance_of_playing_this_round),
     news: el.news ?? '',
     priceChangeEvent: num(el.cost_change_event) / 10,
+    minutes: num(el.minutes),
+    eventPoints: num(el.event_points),
   };
 }
 

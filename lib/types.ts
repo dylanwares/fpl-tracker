@@ -34,6 +34,10 @@ export interface Player {
   news: string;
   /** net price delta this gameweek, in millions */
   priceChangeEvent: number;
+  /** minutes played this season */
+  minutes: number;
+  /** points scored in the current/last gameweek */
+  eventPoints: number;
 }
 
 export interface Team {

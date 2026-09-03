@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { FixtureChip } from '@/components/FixtureChip';
 import { TransferScratchpad } from '@/components/TransferScratchpad';
 import { Empty, Section, Tile, TileRow } from '@/components/ui';
@@ -96,6 +98,15 @@ export default async function TeamPage() {
           }))}
         />
       </Section>
+
+      <div className="px-4 pt-6">
+        <Link
+          href="/scout"
+          className="inline-block rounded-md border border-line px-3 py-2 text-sm text-muted hover:text-text"
+        >
+          Scout &amp; template comparison →
+        </Link>
+      </div>
     </div>
   );
 }

@@ -65,6 +65,8 @@ export interface RawElement {
   chance_of_playing_next_round: number | null;
   news: string;
   cost_change_event: number; // tenths
+  minutes: number;
+  event_points: number;
 }
 
 export interface RawFixture {

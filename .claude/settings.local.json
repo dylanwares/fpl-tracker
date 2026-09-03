@@ -11,7 +11,8 @@
       "Read(//c/Program Files/GitHub CLI/**)",
       "Bash(where gh *)",
       "PowerShell(Get-Command gh -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; git config --global credential.helper; git config --global --get-regexp \"credential\"; echo \"---\"; Test-Path \"$env:LOCALAPPDATA\\\\GitHubDesktop\")",
-      "Bash(ssh -o BatchMode=yes -o ConnectTimeout=8 -T git@github.com)"
+      "Bash(ssh -o BatchMode=yes -o ConnectTimeout=8 -T git@github.com)",
+      "Bash(cd \"d:/Documents/Projects/FPL Tracker\" && grep -oE \"application error|error-h1|Template XI|My squad at a glance|Value leaderboard\" /tmp/s.html | sort | uniq -c; echo \"--- dev log tail ---\"; tail -8 \"C:/Users/dylan/AppData/Local/Temp/claude/d--Documents-Projects-FPL-Tracker/88aa8151-cfd3-444b-ad30-6c96e7c3aa83/scratchpad/dev-scout.log\" | grep -v \"Failed to set Next.js data cache\")"
     ]
   }
 }

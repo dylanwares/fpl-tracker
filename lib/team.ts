@@ -104,6 +104,8 @@ export async function getMySquad(): Promise<MySquad> {
           chanceOfPlaying: null,
           news: '',
           priceChangeEvent: 0,
+          minutes: 0,
+          eventPoints: 0,
         } satisfies Player),
     }));
 
