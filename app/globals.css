@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/*
+ * Palette derived from FPL's own purple rather than a neutral dark theme.
+ * The subject is signed exposure, so the two accent colours do the heavy
+ * lifting and everything else stays quiet. Dark by default — most use is
+ * evenings and late midweek.
+ */
+:root {
+  --bg: #1c1421; /* deep aubergine-black */
+  --surface: #241a2b; /* rows, sheets */
+  --surface-2: #2c2035; /* raised / expanded row */
+  --line: #362a3f; /* hairlines, the zero axis */
+  --text: #f0ebf2;
+  --muted: #9b8fa6; /* secondary figures, labels */
+  --gain: #00e585; /* differentials */
+  --threat: #f0883e; /* threats — amber, not red, for colour-blind viewing */
+  --gain-dim: #0b6b48;
+  --threat-dim: #7a4a24;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-gain: var(--gain);
+  --color-threat: var(--threat);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures everywhere a number sits in a column, so figures align down
+ * the list and week-to-week changes don't shift the layout. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* The only motion worth having is the row expand, which shows what changed. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.skeleton {
+  background: var(--line);
+  border-radius: 4px;
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}

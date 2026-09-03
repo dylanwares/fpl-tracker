@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --ts --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm --disable-git --yes)",
+      "Bash(curl -s -o /tmp/a.json -w '%{http_code}' __TRACKED_VAR__/api/team/analysis)",
+      "Read(//tmp/**)",
+      "Bash(curl -s __TRACKED_VAR__/api/team/fixtures?horizon=5)"
+    ]
+  }
+}
